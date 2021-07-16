@@ -13,7 +13,7 @@
 				color: white;
 			}
 			img {
-				object-fit: scale-down;
+				object-fit: fill;
 			}
 			.body {
 				height: 100vh;
@@ -44,12 +44,11 @@
 			}
 			.wrapImage {
 				height: 80%;
-				justify-content: center;
-				max-width: 80%;
-				margin-left: auto;
-				margin-right: auto;
-				align-items: center;
 				display: flex;
+				/* justify-content: center; */
+				max-width: 100%;
+				justify-content: center;
+				align-items: center;
 			}
 			.textTitle {
 				font-size: 5rem;
@@ -69,7 +68,8 @@
 				text-align: center;
 			}
 			.imageContent {
-				height: fit-content;
+				width: 90%;
+				height: 42rem;
 			}
 		</style>
 		<link
