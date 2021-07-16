@@ -1,30 +1,198 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Page Title</title>
-		<link rel="stylesheet" href="styles.css" />
-    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+		<title>Gift</title>
+		<style>
+			body {
+        background-image: url("https://assets.icheck.vn/image/2021/appId_null/7/f9975c620a459f303e43dbd0eb44b23a.png");
+				background-repeat: no-repeat;
+				background-attachment: fixed;
+				background-size: 100% 100%;
+				margin: 0;
+				background-color: hsl(0, 0%, 90%);
+				color: white;
+			}
+			.body {
+				height: 100vh;
+				overflow: hidden;
+			}
+			.wrapHeader {
+				max-width: 90%;
+				margin: auto;
+				height: 65%;
+			}
+			.imageHeader {
+				max-width: 85%;
+				margin: auto;
+				padding-top: 3rem;
+			}
+			.warpBottom {
+				height: 35%;
+				background-color: #299245;
+				border-top-left-radius: 3rem;
+				border-top-right-radius: 3rem;
+				min-height: 20rem;
+				background-image: url("https://assets.icheck.vn/image/2021/appId_null/7/3ce88d025be82077f8fe1bbf0c952df2.png");
+				background-repeat: no-repeat;
+				background-position: bottom left;
+				/* background-attachment: fixed; */
+				background-size: 100% 50%;
+			}
+			.wrapImage {
+				height: 80%;
+				justify-content: center;
+				max-width: 80%;
+				margin-left: auto;
+				margin-right: auto;
+				align-items: center;
+				display: flex;
+			}
+			.textTitle {
+				font-size: 5rem;
+				font-family: "Roboto";
+				text-transform: uppercase;
+				text-align: center;
+			}
+			.wrapText {
+				display: flex;
+				flex-direction: column;
+				padding: 4rem 5rem;
+			}
+			.textDetail {
+				font-family: "Roboto";
+				font-size: 2rem;
+				margin: 3rem 2rem;
+				text-align: center;
+			}
+		</style>
+		<link
+			href="https://fonts.googleapis.com/css?family=Roboto"
+			rel="stylesheet"
+		/>
+		<script type="text/javascript">
+			const id = location.search.split("id=")[1];
+		</script>
 	</head>
 	<body>
 		<div class="body">
 			<div class="wrapHeader">
 				<div class="imageHeader">
-					<img src="./images/text.png" width="100%" height="100%" />
+					<img
+						src="https://assets.icheck.vn/image/2021/appId_null/7/a1b945332f2839b45fbeefd7ae4bbe7d.png"
+						width="100%"
+						height="100%"
+					/>
 				</div>
 				<div class="wrapImage">
 					<div class="imageContent">
-						<img src="./images/2.png" width="100%" height="100%" />
+						<img
+							src="https://assets.icheck.vn/image/2021/appId_null/7/bb234ccb66cbac07866d952ff7dea7cf.png"
+							width="100%"
+							height="100%"
+							id="link"
+						/>
 					</div>
 				</div>
 			</div>
 			<div class="warpBottom">
 				<div class="wrapText">
-					<span class="textTitle">Cứ Scan liền tay</span>
-					<span class="textTitle">Vận may sẽ tới!</span>
-					<span class="textDetail"
-						>Son môi có hạn sử dụng từ 12-24 tháng. Hãy kiểm tra hạn sử dụng của
-						son để đảm bảo sức khỏe của bạn nhé!</span
-					>
+					<span class="textTitle" id="title1">title 1</span>
+					<span class="textTitle" id="title2">title 2</span>
+					<span class="textDetail" id="detail">detail</span>
+					<script>
+						const data = {
+							gift1: {
+								title1: "Lần này chưa ra..",
+								title2: "Lần sau sẽ ra",
+								detail:
+									"Nước hoa được chia thành 2 loại: Mùa hè và Mùa đông. Hãy lựa nước hoa phù hợp cho từng mùa, và đọc review trên iCheck để hiểu thêm về loại nước hoa bạn dùng nhé!",
+								link: "https://assets.icheck.vn/image/2021/appId_null/7/bb234ccb66cbac07866d952ff7dea7cf.png",
+							},
+							gift2: {
+								title1: "Cứ Scan liền tay",
+								title2: "Vận may sẽ tới!",
+								detail:
+									"Son môi có hạn sử dụng từ 12-24 tháng. Hãy kiểm tra hạn sử dụng của son để đảm bảo sức khỏe của bạn nhé!",
+								link: "https://assets.icheck.vn/image/2021/appId_null/7/49e5d93b573c7bd4145f91a50ebdfb1b.png",
+							},
+							gift3: {
+								title1: "Quà may mắn",
+								title2: "Dành cho người may mắn",
+								detail:
+									"Người tiêu dùng thông thái là người có thể chia sẻ trải nghiệm sử dụng của mình với người khác. Review để chia sẻ trải nghiệm của bạn",
+								link: "https://assets.icheck.vn/image/2021/appId_null/7/325da3bab7db2f625b747a4b1af3537f.png",
+							},
+							gift4: {
+								title1: "Suỵt!",
+								title2: "Bí thuật iCheck",
+								detail: "iCheck có thể quét được cả mã QR",
+								link: "https://assets.icheck.vn/image/2021/appId_null/7/3fd7410a3c5c8a57efee83b65669c179.png",
+							},
+							gift5: {
+								title1: "Quà này hay lắm!",
+								title2: "",
+								detail:
+									"Cửa hàng bạn định mua hàng có thể không có mức giá tốt nhất. Hãy tham khảo những cửa hàng khác, hoặc scan sản phẩm bằng iCheck để tìm mức giá sản phẩm bạn nhé!",
+								link: "https://assets.icheck.vn/image/2021/appId_null/7/0017e459729cf3123dfbf8ac7b541399.png",
+							},
+							gift6: {
+								title1: "Đây là quà đặc biệt!",
+								title2: "",
+								detail:
+									"Nếu còn băn khoăn về món đồ định mua, bạn có thể tham khảo phần Đánh giá của những người dùng trước trên app iCheck nhé",
+								link: "https://assets.icheck.vn/image/2021/appId_null/7/e109446fe0f96a05c94249360fc0d9fa.png",
+							},
+							gift7: {
+								title1: "Úm ba la",
+								title2: "Fact hay mở ra",
+								detail:
+									"Nếu bạn từng Scan ra sản phẩm không có thông tin, đừng lo.. iCheck vẫn đang nỗ lực cập nhật sản phẩm mới mỗi ngày!",
+								link: "https://assets.icheck.vn/image/2021/appId_null/7/c84a39baca381c163d13f4a557395000.png",
+							},
+						};
+						if (id === "1") {
+							document.getElementById("title1").textContent = data.gift1.title1;
+							document.getElementById("title2").textContent = data.gift1.title2;
+							document.getElementById("detail").textContent = data.gift1.detail;
+							document.getElementById("link").src = data.gift1.link;
+						}
+						if (id === "2") {
+							document.getElementById("title1").textContent = data.gift2.title1;
+							document.getElementById("title2").textContent = data.gift2.title2;
+							document.getElementById("detail").textContent = data.gift2.detail;
+							document.getElementById("link").src = data.gift2.link;
+						}
+						if (id === "3") {
+							document.getElementById("title1").textContent = data.gift3.title1;
+							document.getElementById("title2").textContent = data.gift3.title2;
+							document.getElementById("detail").textContent = data.gift3.detail;
+							document.getElementById("link").src = data.gift3.link;
+						}
+						if (id === "4") {
+							document.getElementById("title1").textContent = data.gift4.title1;
+							document.getElementById("title2").textContent = data.gift4.title2;
+							document.getElementById("detail").textContent = data.gift4.detail;
+							document.getElementById("link").src = data.gift4.link;
+						}
+						if (id === "5") {
+							document.getElementById("title1").textContent = data.gift5.title1;
+							document.getElementById("title2").textContent = data.gift5.title2;
+							document.getElementById("detail").textContent = data.gift5.detail;
+							document.getElementById("link").src = data.gift5.link;
+						}
+						if (id === "6") {
+							document.getElementById("title1").textContent = data.gift6.title1;
+							document.getElementById("title2").textContent = data.gift6.title2;
+							document.getElementById("detail").textContent = data.gift6.detail;
+							document.getElementById("link").src = data.gift6.link;
+						}
+						if (id === "7") {
+							document.getElementById("title1").textContent = data.gift7.title1;
+							document.getElementById("title2").textContent = data.gift7.title2;
+							document.getElementById("detail").textContent = data.gift7.detail;
+							document.getElementById("link").src = data.gift7.link;
+						}
+					</script>
 				</div>
 			</div>
 		</div>
